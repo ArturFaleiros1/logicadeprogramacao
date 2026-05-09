@@ -1,0 +1,11 @@
+nome = input("Digite seu nome: ")
+data_nascimento = input("Digite sua data de nascimento: ")
+peso = float(input("Digite seu peso: "))
+altura = float(input("Digite sua altura: "))
+print("Olá", nome, "seja bem vindo ao sistema python")
+print("Aqui estão as suas informações: ")
+print("Sua data de nascimento é ", data_nascimento)
+print("Sua altura é", altura)
+print("Seu peso é", peso)
+
+print(type(nome))
