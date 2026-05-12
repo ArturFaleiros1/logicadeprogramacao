@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+1|Hyundai|55000.0|Creta
+2|Mitsubishi|15000.0|Ora
+=======
+ID: 1 | Modelo: Mitsubishi | Preco: R$45000.00 | Marca: Ora
+>>>>>>> 4a06411aea03906158ca56f0de663e12a8f02e27
