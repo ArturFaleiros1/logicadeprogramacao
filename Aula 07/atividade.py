@@ -1,15 +1,25 @@
 import time
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> afb3df03907040adb634ed13e6b7b65160e52ada
 import os
 carros = []
 proximo_id = 1
 lista_carro = 'catalogo_carro.txt'
 
+<<<<<<< HEAD
 # Verifica se o arquivo existe, se não existir ele cria
+=======
+>>>>>>> afb3df03907040adb634ed13e6b7b65160e52ada
 if not os.path.exists(lista_carro):
     with open(lista_carro, 'w') as arquivo:
         pass
 
+<<<<<<< HEAD
 # le o arquivo txt e carrega a lista dos carros
+=======
+>>>>>>> afb3df03907040adb634ed13e6b7b65160e52ada
 with open(lista_carro, 'r') as arquivo:
     for linha in arquivo:
         linha = linha.strip()
@@ -21,10 +31,22 @@ with open(lista_carro, 'r') as arquivo:
                 'preco' : float(partes[2]),
                 'marca' : partes[3]
             }
+<<<<<<< HEAD
             # garante que o id não esteja duplicado ou com o mesmo id quando executar o sistema denovo
             carros.append(carro)
             if carro['id'] >= proximo_id:
                 proximo_id = carro['id'] + 1
+=======
+            carros.append(carro)
+            if carro['id'] >= proximo_id:
+                proximo_id = carro['id'] + 1
+=======
+ 
+carros = []
+proximo_id = 1
+lista_carro = 'catalogo_carro.txt'
+>>>>>>> 4a06411aea03906158ca56f0de663e12a8f02e27
+>>>>>>> afb3df03907040adb634ed13e6b7b65160e52ada
  
 while True:
     print("====== Sistema de carros ======")
@@ -51,8 +73,19 @@ while True:
  
         carros.append(carro)
         proximo_id += 1
+<<<<<<< HEAD
         with open(lista_carro, 'a') as arquivo:
                  arquivo.write(f"{carro['id']}|{carro['modelo']}|{carro['preco']}|{carro['marca']}\n")
+=======
+<<<<<<< HEAD
+        with open(lista_carro, 'a') as arquivo:
+                 arquivo.write(f"{carro['id']}|{carro['modelo']}|{carro['preco']}|{carro['marca']}\n")
+=======
+ 
+        with open(lista_carro, 'w') as arquivo:
+           arquivo.write(f"ID: {carro['id']} | Modelo: {carro['modelo']} | Preco: R${carro['preco']:.2f} | Marca: {carro['marca']}\n")
+>>>>>>> 4a06411aea03906158ca56f0de663e12a8f02e27
+>>>>>>> afb3df03907040adb634ed13e6b7b65160e52ada
 
         print("✅ Carro cadastrado com sucesso!")
  
@@ -86,11 +119,24 @@ while True:
                     carro['modelo'] = novo_modelo
                     carro['preco'] = novo_preco
                     carro['marca'] = nova_marca
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> afb3df03907040adb634ed13e6b7b65160e52ada
                     
                     with open(lista_carro, 'w') as arquivo:
                         for i in carros:
                             arquivo.write(f"{i['id']}|{i['modelo']}|{i['preco']}|{i['marca']}\n")
 
+<<<<<<< HEAD
+=======
+=======
+ 
+                    with open(lista_carro, 'w') as arquivo:
+                        for c in carros:
+                            arquivo.write(str(c) + "\n")
+>>>>>>> 4a06411aea03906158ca56f0de663e12a8f02e27
+>>>>>>> afb3df03907040adb634ed13e6b7b65160e52ada
  
                     print('✅ Carro atualizado com sucesso!')
                     encontrado = True
@@ -114,9 +160,23 @@ while True:
             for carro in carros:
                 if carro['id'] == id_busca:
                     carros.remove(carro)
+<<<<<<< HEAD
                     with open(lista_carro, 'w') as arquivo:
                         for i in carros:
                             arquivo.write(f"{i['id']}|{i['modelo']}|{i['preco']}|{i['marca']}\n")
+=======
+<<<<<<< HEAD
+                    with open(lista_carro, 'w') as arquivo:
+                        for i in carros:
+                            arquivo.write(f"{i['id']}|{i['modelo']}|{i['preco']}|{i['marca']}\n")
+=======
+ 
+                    with open(lista_carro, 'w') as arquivo:
+                        for c in carros:
+                            arquivo.write(str(c) + "\n")
+ 
+>>>>>>> 4a06411aea03906158ca56f0de663e12a8f02e27
+>>>>>>> afb3df03907040adb634ed13e6b7b65160e52ada
                     print("✅ Carro deletado com sucesso!")
                     encontrado = True
                     break
